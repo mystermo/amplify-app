@@ -1,0 +1,43 @@
+{
+  "api": {
+    "api1f277f2c": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "ItemHandler"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "ItemHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_ItemHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ItemHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_ItemHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ItemHandler"
+        }
+      ]
+    }
+  }
+}
